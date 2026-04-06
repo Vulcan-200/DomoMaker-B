@@ -3,7 +3,7 @@ const Domo = models.Domo;
 
 const makerPage = async (req, res) => {
     try {
-        const query = {owner: req.session.account.__id};
+        const query = {owner: req.session.account._id};
         const docs = await Domo.find(query).select('name age').lean().exec();
         
         res.render('app');

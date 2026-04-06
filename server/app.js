@@ -15,7 +15,6 @@ const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/DomoMaker';
 mongoose.connect(dbURI).catch((err) => {
     if (err)
     {
-        console.log('Could not connect to database');
         throw err;
     }
 });
