@@ -22,7 +22,7 @@ const makeDomo = async (req, res) => {
     const domoData = {
         name: req.body.name,
         age: req.body.age,
-        owner: req.session.account_id,
+        owner: req.session.account._id,
     };
 
     try {
